@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleteon/2.0.4/skeleton.min.css">
+        <title>Control de gastos</title>
+        <link rel="stylesheet" href="index.css">
+        <script scr="htpps://cdnjs.cloudflare.com/ajax/libs/node-uuid.min.js"></script>
+        <script scr="control_de_gastos.js"></script>
+</head>
+<body onload="">
+    <div class="container">
+            <header>
+                <h1>Gastos</h1>
+                <div class="contenido-principal contenido">
+                    <div class="row">
+                        <div id="pregunta">
+                                <h2>Coloca tu presupuesto</h2>
+                                <div id="msj_error_pregunta"></div>
+                                <form>
+                                    <input
+                                    type="number"7
+                                    id="presupuestoInicial"
+                                    class="u-full-width"
+                                    placeholder="Coloca tu presupuesto"
+                                    />
+                                    <input
+                                    type="button"
+                                    onclick="guardarPresupuesto()"
+                                    class="button-primary u-full-width"
+                                    value="Crear Presupuesto"
+                                    />
+                                </form>
+                        </div>
+                        <div id="divGastos">
+                            <div class="one-half column">
+                                <div id="divCrearGasto">
+                                    <form id="formGastos">
+                                        <h2>Agrega tus gastos aquí</h2>
+                                        <div id="msj_error_creargasto"></div>
+                                        <div class="campo">
+                                            <label>Nombre Gasto</label>
+                                            <input
+                                            type="text"
+                                            class="u-full-width"
+                                            placeholder="Ej. Transporte"
+                                            id="tipoGasto"
+                                            />
+                                        </div>
+                                        <div class="campo">
+                                            <label>Cantidad Gasto</label>
+                                            <input
+                                            type="number"
+                                            class="u-full-width"
+                                            placeholder="Ej. 300"
+                                            id="cantidadGasto"
+                                            />
+                                        </div>
+                                        <input
+                                        type="button"
+                                        onclick="agregarGasto()"
+                                        class="button-primary u-full-width"
+                                        value="Agregar Gasto"
+                                        />
+                                    </form>
+                                </div>
+
+                            </div> 
+                            <div class="one-half column" id="divControlGastos">
+                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+    </div>
+</body>
+</html>
